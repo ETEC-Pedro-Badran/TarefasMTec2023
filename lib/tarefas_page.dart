@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:tarefas/tarefa_state.dart';
 
 class TarefasPage extends StatelessWidget {
-  const TarefasPage({super.key});
+  final TarefaState state;
+  const TarefasPage({super.key, required this.state});
 
   @override
   Widget build(BuildContext context) {
+    
+
     return Scaffold(
       appBar: AppBar(title: Text("Tarefas"),),
-      body: listaVazia(),
+      body: state.listaTarefas.isEmpty?listaVazia():Container(),
       floatingActionButton: 
         FloatingActionButton(onPressed: (){
           Navigator.of(context).pushNamed("/add");

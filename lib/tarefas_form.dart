@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 import 'tarefa_model.dart';
+import 'tarefa_state.dart';
 
 class TarefasForm extends StatefulWidget {
-  const TarefasForm({super.key});
+  final TarefaState state;
+  const TarefasForm({super.key, required this.state});
 
   @override
   State<TarefasForm> createState() => _TarefasFormState();
@@ -72,6 +74,7 @@ class _TarefasFormState extends State<TarefasForm> {
               if (_formKey.currentState!.validate()) {
                 _formKey.currentState!.save(); // 4-Solicita ao formulário que salve os dados
                 print("Tarefa digitada: $_tarefa");  // 9- Aqui iremos enviar para o banco de dados
+
               }
             }, child: const Text("Salvar"))
           ],
