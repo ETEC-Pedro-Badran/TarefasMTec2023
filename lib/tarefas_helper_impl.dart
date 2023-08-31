@@ -1,3 +1,7 @@
+import 'package:sembast/sembast.dart';
+import 'package:tarefas/sembast_database.dart';
+
+import 'tarefa_model.dart';
 import 'tarefas_helper.dart';
 
 class TarefasHelperImpl extends TarefasHelper {
@@ -20,9 +24,10 @@ class TarefasHelperImpl extends TarefasHelper {
   }
 
   @override
-  salvar() {
-    // TODO: implement salvar
-    throw UnimplementedError();
+  salvar(Tarefa tarefa) async {
+      var store = StoreRef.main();
+      var db = SembastDatabase().getInstance();
+      await store.record('tarefa').put(db,tarefa.getMap());
   }
 
 
