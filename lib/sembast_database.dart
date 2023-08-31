@@ -3,10 +3,15 @@ import 'package:sembast/sembast_io.dart';
 
 class SembastDatabase {
   
-String dbPath = 'sample.db';
+String dbPath = 'tarefas.db';
 DatabaseFactory dbFactory = databaseFactoryIo;
+late Database db;
 
-// We use the database factory to open the database
-Database db = await dbFactory.openDatabase(dbPath);
+getDatabase() async {
+  if (db==null) {
+    db = await dbFactory.openDatabase(dbPath);
+  }
+  return db;
+}
 
 }
