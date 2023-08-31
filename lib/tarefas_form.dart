@@ -3,6 +3,7 @@ import 'package:intl/intl.dart';
 
 import 'tarefa_model.dart';
 import 'tarefa_state.dart';
+import 'tarefas_helper.dart';
 
 class TarefasForm extends StatefulWidget {
   final TarefaState state;
@@ -17,6 +18,8 @@ class _TarefasFormState extends State<TarefasForm> {
 
   final _formKey = GlobalKey<FormState>(); // 1- Controla o estado do formulário
   final _tarefa = Tarefa(descricao: "", prazo: DateTime.now()); // 6-Objeto que irá receber os dados da nova tarefa
+  late TarefasHelper helper;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -67,13 +70,15 @@ class _TarefasFormState extends State<TarefasForm> {
               onSaved: (value) => _tarefa.prazo = DateFormat("dd/MM/yyyy").parse(value!), // 8 - armazenando a data no campo prazo da tarefa 
             ),
             const SizedBox(height: 10,),
-            ElevatedButton(onPressed: (){
+            ElevatedButton(onPressed: () async {
               
               _formKey.currentState!.deactivate();
               //3- Executa a validação do formulário
               if (_formKey.currentState!.validate()) {
                 _formKey.currentState!.save(); // 4-Solicita ao formulário que salve os dados
                 print("Tarefa digitada: $_tarefa");  // 9- Aqui iremos enviar para o banco de dados
+
+                await helper.salvar();               
 
               }
             }, child: const Text("Salvar"))
