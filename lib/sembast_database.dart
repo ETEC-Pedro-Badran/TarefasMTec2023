@@ -7,7 +7,7 @@ String dbPath = 'tarefas.db';
 DatabaseFactory dbFactory = databaseFactoryIo;
 late Database db;
 
-getDatabase() async {
+getInstance() async {
   if (db==null) {
     db = await dbFactory.openDatabase(dbPath);
   }
