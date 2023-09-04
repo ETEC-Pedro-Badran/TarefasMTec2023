@@ -25,10 +25,8 @@ class TarefasHelperImpl extends TarefasHelper {
 
   @override
   salvar(Tarefa tarefa) async {
-      var store =  intMapStoreFactory.store('tarefas');
-      var db = await SembastDatabase().getInstance();
-      return await store.add(db,tarefa.getMap());
+    var store = intMapStoreFactory.store('tarefas');
+    var db = (await SembastDatabase().getInstance());
+    return await store.add(db, tarefa.getMap());
   }
-
-
 }
