@@ -13,4 +13,11 @@ class Tarefa {
     return "id:$id-descricao: $descricao -prazo: $prazo -concluido: $concluido";
   }
 
+  Map<String, Object?> getMap() {
+    return { "id": this.id,
+             "descricao":this.descricao, 
+             "prazo":this.prazo, 
+             "concluido":this.concluido};
+  }
+
 }
