@@ -7,7 +7,7 @@ class SembastDatabase {
   DatabaseFactory dbFactory = databaseFactoryIo;
   late Database db;
 
-  getInstance() async {
+  Future<Database> getInstance() async {
     if (db==null) {
       db = await dbFactory.openDatabase(dbPath);
     }

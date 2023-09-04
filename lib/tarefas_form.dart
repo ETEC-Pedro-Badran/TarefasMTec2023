@@ -78,7 +78,7 @@ class _TarefasFormState extends State<TarefasForm> {
                 _formKey.currentState!.save(); // 4-Solicita ao formulário que salve os dados
                 print("Tarefa digitada: $_tarefa");  // 9- Aqui iremos enviar para o banco de dados
 
-                await helper.salvar();               
+                await helper.salvar(_tarefa);               
 
               }
             }, child: const Text("Salvar"))

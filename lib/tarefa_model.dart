@@ -13,7 +13,7 @@ class Tarefa {
     return "id:$id-descricao: $descricao -prazo: $prazo -concluido: $concluido";
   }
 
-  Map<String, Object?> getMap() {
+  Map<String, dynamic?> getMap() {
     return { "id": this.id,
              "descricao":this.descricao, 
              "prazo":this.prazo, 
