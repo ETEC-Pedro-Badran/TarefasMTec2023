@@ -6,25 +6,34 @@ import 'tarefas_helper.dart';
 
 class TarefasHelperImpl extends TarefasHelper {
   @override
-  excluir() {
-    // TODO: implement excluir
-    throw UnimplementedError();
+  Future<void> excluir(int id) async {
+    var store = intMapStoreFactory.store('tarefas');
+    var db = (await SembastDatabase().getInstance());
+    var record =
+        await store.delete(db, finder: Finder(filter: Filter.byKey(id)));
   }
 
   @override
-  listar() {
-    // TODO: implement listar
-    throw UnimplementedError();
+  Future<List<Tarefa>> listar() async {
+    var store = intMapStoreFactory.store('tarefas');
+    var db = (await SembastDatabase().getInstance());
+    var snapshot = await store.find(db);
+    return snapshot
+        .map((e) => Tarefa.fromJson(id: e.key, value: e.value))
+        .toList();
   }
 
   @override
-  obter() {
-    // TODO: implement obter
-    throw UnimplementedError();
+  Future<Tarefa> obter(int id) async {
+    var store = intMapStoreFactory.store('tarefas');
+    var db = (await SembastDatabase().getInstance());
+    var record = await store.record(id).get(db);
+    if (record == null) throw "Registro $id não encontrado.";
+    return Tarefa.fromJson(id: id, value: record);
   }
 
   @override
-  salvar(Tarefa tarefa) async {
+  Future<int> salvar(Tarefa tarefa) async {
     var store = intMapStoreFactory.store('tarefas');
     var db = (await SembastDatabase().getInstance());
     return await store.add(db, tarefa.getMap());

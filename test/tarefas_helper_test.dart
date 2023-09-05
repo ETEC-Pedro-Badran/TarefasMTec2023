@@ -10,7 +10,41 @@ void main() {
     var helper = TarefasHelperImpl();
     try {
       var salvo = await helper.salvar(tarefa);
-      print(salvo);
+      expect(salvo, isNonZero);
+    } catch (e) {
+      print(e);
+    }
+  });
+
+  testWidgets('tarefas helper: listar', (tester) async {
+    var helper = TarefasHelperImpl();
+    try {
+      var lista = await helper.listar();
+      print(lista);
+      expect(lista, isNotEmpty);
+    } catch (e) {
+      print(e);
+    }
+  });
+
+  testWidgets('tarefas helper: obter', (tester) async {
+    var helper = TarefasHelperImpl();
+    try {
+      var tarefa = await helper.obter(1);
+      print(tarefa);
+      expect(tarefa.id, equals(1));
+    } catch (e) {
+      print(e);
+    }
+  });
+
+  testWidgets('tarefas helper: excluir', (tester) async {
+    var helper = TarefasHelperImpl();
+    try {
+      await helper.excluir(1);
+      var tarefa = await helper.obter(1);
+      print(tarefa);
+      expect(tarefa, isNull);
     } catch (e) {
       print(e);
     }
