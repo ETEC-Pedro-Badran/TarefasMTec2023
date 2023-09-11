@@ -9,8 +9,7 @@ class TarefasHelperImpl extends TarefasHelper {
   Future<void> excluir(int id) async {
     var store = intMapStoreFactory.store('tarefas');
     var db = (await SembastDatabase().getInstance());
-    var record =
-        await store.delete(db, finder: Finder(filter: Filter.byKey(id)));
+    await store.delete(db, finder: Finder(filter: Filter.byKey(id)));
   }
 
   @override
