@@ -10,3 +10,5 @@
 {"key":8,"store":"tarefas","value":{"descricao":"Teste","prazo":"14/10/2023 12:53:26"}}
 {"key":9,"store":"tarefas","value":{"descricao":"Tarefa de Teste","prazo":"14/10/2023 12:55:17"}}
 {"key":10,"store":"tarefas","value":{"descricao":"Impementar o método salvar","prazo":"15/09/2023 12:00:00"}}
+{"key":11,"store":"tarefas","value":{"descricao":"Último teste de inclusão","prazo":"23/09/2023 12:00:00"}}
+{"key":12,"store":"tarefas","value":{"descricao":"Tarefa de PAM Evaldo e Andre","prazo":"19/09/2023 12:00:00"}}
