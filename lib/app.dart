@@ -17,7 +17,7 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.orange),
       initialRoute: "/",
-      routes: {"/":(context)=>TarefasPage(state: state,),
+      routes: {"/":(context)=>TarefasPage(helper: helper),
                "/add":(context)=>TarefasNovo(state: state,helper: helper,)},
       
     );

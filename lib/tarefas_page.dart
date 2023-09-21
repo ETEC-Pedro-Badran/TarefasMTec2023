@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:tarefas/tarefa_state.dart';
+import 'package:tarefas/tarefas_helper.dart';
+import 'package:tarefas/tarefas_list.dart';
 
 class TarefasPage extends StatelessWidget {
-  final TarefaState state;
-  const TarefasPage({super.key, required this.state});
+  final TarefasHelper helper;
+  const TarefasPage({super.key, required this.helper});
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +12,15 @@ class TarefasPage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(title: Text("Tarefas"),),
-      body: state.listaTarefas.isEmpty?listaVazia():Container(),
+      body: FutureBuilder(
+        future: helper.listar(),
+        builder: (context, snapshot) =>
+        !snapshot.hasData?
+           Center(
+             child: CircularProgressIndicator(valueColor: 
+                AlwaysStoppedAnimation(Colors.blue),),
+           ):
+        snapshot.data!.isEmpty?listaVazia():TarefasList(tarefas: snapshot.data),),
       floatingActionButton: 
         FloatingActionButton(onPressed: (){
           Navigator.of(context).pushNamed("/add");
