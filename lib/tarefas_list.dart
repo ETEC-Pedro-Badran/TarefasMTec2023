@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'tarefa_model.dart';
 
 class TarefasList extends StatelessWidget {
-  final Tarefa tarefas;
+  final List<Tarefa> tarefas;
   const TarefasList({super.key, required this.tarefas});
 
   @override

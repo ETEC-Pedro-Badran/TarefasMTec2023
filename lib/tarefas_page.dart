@@ -20,7 +20,8 @@ class TarefasPage extends StatelessWidget {
              child: CircularProgressIndicator(valueColor: 
                 AlwaysStoppedAnimation(Colors.blue),),
            ):
-        snapshot.data!.isEmpty?listaVazia():TarefasList(tarefas: snapshot.data),),
+        snapshot.data!.isEmpty?listaVazia():
+        TarefasList(tarefas: snapshot.data),),
       floatingActionButton: 
         FloatingActionButton(onPressed: (){
           Navigator.of(context).pushNamed("/add");
