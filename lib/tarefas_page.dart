@@ -15,6 +15,8 @@ class TarefasPage extends StatelessWidget {
       body: FutureBuilder(
         future: helper.listar(),
         builder: (context, snapshot) =>
+        // 1- sem dados (lista vazia, nao estada carregando)
+        // 2- consultando lista vazia/3-lista recuperada
         !snapshot.hasData?
            Center(
              child: CircularProgressIndicator(valueColor: 
