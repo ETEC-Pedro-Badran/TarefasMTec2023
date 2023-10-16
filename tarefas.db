@@ -13,3 +13,5 @@
 {"key":2,"store":"tarefas","value":{"descricao":"Somente essa","prazo":"28/10/2023 12:00:00","id":"2"}}
 {"key":3,"store":"tarefas","value":{"descricao":"Essa alterei também","prazo":"28/10/2023 12:00:00","id":"3"}}
 {"key":3,"store":"tarefas","value":{"descricao":"Essa alterei também 2","prazo":"28/10/2023 12:00:00","id":"3"}}
+{"key":3,"store":"tarefas","value":{"descricao":"Essa alterei também 3","prazo":"28/10/2023 12:00:00","id":"3"}}
+{"key":4,"store":"tarefas","value":{"descricao":"Será que vai tb.","prazo":"28/10/2023 12:00:00","id":"4"}}
