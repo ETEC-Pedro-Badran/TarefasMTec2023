@@ -9,7 +9,7 @@ class TarefasPage extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    
+    state.carregarLista();
     
     return Scaffold(
       appBar: AppBar(title: Text("Tarefas"),),
