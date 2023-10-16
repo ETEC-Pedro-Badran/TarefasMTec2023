@@ -24,7 +24,7 @@ class TarefasPage extends StatelessWidget {
                 AlwaysStoppedAnimation(Colors.blue),),
            ):
         state.listaTarefas.isEmpty?listaVazia():
-        TarefasList(tarefas: state.listaTarefas),),
+        TarefasList(state: state),),
       floatingActionButton: 
         FloatingActionButton(onPressed: (){
           Navigator.of(context).pushNamed("/add");
