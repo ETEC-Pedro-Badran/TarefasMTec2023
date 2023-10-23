@@ -19,7 +19,10 @@ class TarefaState {
         listaTarefas = lista;
         carregando.value = false;
     });
+  }
 
+  salvar(Tarefa tarefa) async {
+    await helper.salvar(tarefa);
   }
 
 }
