@@ -1,16 +1,10 @@
 {"version":1,"sembast":1}
 {"key":2,"store":"tarefas","value":{"descricao":"Somente essa","prazo":"28/10/2023 12:00:00","id":"2","concluido":"23/10/2023 02:51:16"}}
-{"key":3,"store":"tarefas","value":{"descricao":"Essa alterei também 3","prazo":"28/10/2023 12:00:00","id":"3"}}
-{"key":4,"store":"tarefas","value":{"descricao":"Será que vai tb.","prazo":"28/10/2023 12:00:00","id":"4"}}
+{"key":3,"store":"tarefas","value":{"descricao":"Essa alterei também 3","prazo":"28/10/2023 12:00:00","id":"3","concluido":"23/10/2023 02:53:10"}}
+{"key":4,"store":"tarefas","value":{"descricao":"Será que vai tb.","prazo":"28/10/2023 12:00:00","id":"4","concluido":"23/10/2023 02:53:10"}}
 {"key":5,"store":"tarefas","value":{"descricao":"Tarefa Que foi de Teste","prazo":"28/10/2023 12:00:00","id":"5","concluido":"23/10/2023 02:51:14"}}
 {"key":6,"store":"tarefas","value":{"descricao":"Tarefa Que foi de Teste","prazo":"28/10/2023 12:00:00","id":"6","concluido":"23/10/2023 02:53:09"}}
-{"key":7,"store":"tarefas","value":{"descricao":"Tarefa Que foi de Teste","prazo":"28/10/2023 12:00:00","id":"7","concluido":"23/10/2023 02:53:04"}}
 {"key":8,"store":"tarefas","value":{"descricao":"Tarefa Que foi de Teste","prazo":"28/10/2023 12:00:00","id":"8","concluido":"23/10/2023 02:53:04"}}
-{"key":9,"store":"tarefas","value":{"descricao":"Tarefa Que foi de Teste","prazo":"28/10/2023 12:00:00","id":"9","concluido":"23/10/2023 02:51:17"}}
-{"key":10,"store":"tarefas","value":{"descricao":"Tarefa Que foi de Teste","prazo":"28/10/2023 12:00:00","id":"2"}}
-{"key":11,"store":"tarefas","value":{"descricao":"Tarefa Que foi de Teste","prazo":"28/10/2023 12:00:00","id":"2"}}
 {"key":12,"store":"tarefas","value":{"descricao":"Tarefa Que foi de Teste","prazo":"28/10/2023 12:00:00","id":"2"}}
-{"key":13,"store":"tarefas","value":{"descricao":"Nova tarefa, nem tão nova assim.","prazo":"31/10/2023 12:00:00","id":"13"}}
 {"key":14,"store":"tarefas","value":{"descricao":"Criando mais uma tarefa","prazo":"31/10/2023 12:00:00"}}
-{"key":4,"store":"tarefas","value":{"descricao":"Será que vai tb.","prazo":"28/10/2023 12:00:00","id":"4","concluido":"23/10/2023 02:53:10"}}
-{"key":3,"store":"tarefas","value":{"descricao":"Essa alterei também 3","prazo":"28/10/2023 12:00:00","id":"3","concluido":"23/10/2023 02:53:10"}}
+{"key":8,"deleted":true,"store":"tarefas"}
