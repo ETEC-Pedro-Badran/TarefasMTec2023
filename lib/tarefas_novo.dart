@@ -7,15 +7,18 @@ import 'tarefas_helper.dart';
 class TarefasNovo extends StatelessWidget {
   final TarefaState state;
   final TarefasHelper helper;
-  const TarefasNovo({super.key, required this.state, required this.helper});
+  const TarefasNovo({required this.state, required this.helper});
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       appBar: AppBar(
         title: const Text("Nova Tarefa"),
       ),
-      body: TarefasForm(state: this.state, helper: helper,),
+      body: TarefasForm(
+        state: this.state,
+        helper: helper,
+      ),
     );
   }
 }

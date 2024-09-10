@@ -1,10 +1,15 @@
 import 'package:sembast/sembast.dart';
-import 'package:sembast/sembast_io.dart';
+import 'package:sembast_web/sembast_web.dart';
 
 class SembastDatabase {
   String _dbPath = 'tarefas.db';
 
   Future<Database> getInstance() async {
-    return await databaseFactoryIo.openDatabase(_dbPath);
+    var factory = databaseFactoryWeb;
+
+    // Open the database
+    var db = await factory.openDatabase(_dbPath);
+
+    return db;
   }
 }

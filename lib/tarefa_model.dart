@@ -14,7 +14,7 @@ class Tarefa {
     return "id:$id-descricao: $descricao -prazo: $prazo -concluido: $concluido";
   }
 
-  Map<String, dynamic?> getMap() {
+  Map<String, dynamic> getMap() {
     var dfm = DateFormat("dd/MM/yyyy hh:mm:ss");
     var map = {
       "descricao": this.descricao,

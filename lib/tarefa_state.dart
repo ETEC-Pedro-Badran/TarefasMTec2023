@@ -5,19 +5,18 @@ import 'tarefa_model.dart';
 
 class TarefaState {
   ValueNotifier<bool> carregando = ValueNotifier(false);
-  List<Tarefa>  listaTarefas = [];
+  List<Tarefa> listaTarefas = [];
   Tarefa? tarefa;
 
   final TarefasHelper helper;
 
   TarefaState(this.helper);
 
-
-  carregarLista(){
+  carregarLista() {
     carregando.value = true;
-      helper.listar().then((lista){ 
-        listaTarefas = lista;
-        carregando.value = false;
+    helper.listar().then((lista) {
+      listaTarefas = lista;
+      carregando.value = false;
     });
   }
 
@@ -28,6 +27,4 @@ class TarefaState {
   delete() async {
     await helper.delete(tarefa!);
   }
-
-
 }
